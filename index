@@ -1,0 +1,50 @@
+<DOCTYPE! html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <title></title>
+  <style>
+  body{ margin:0;}
+  canvas{ width:100%; height:100%;}
+  </style>
+  </head>
+  
+  <boy>
+   <script type="tet/javacript" src="htps://cdnjs.cloudflare.com/aja/libs/three.js/87/three.min.js"></script>
+   <script type=text/jabascript">
+    var scene = new THREE.Scene();
+    var camera = new THREE.perspectivCamera(75,window.innerWidth/window.inerheighto.0.1,1000);
+    
+    var renderer = mew THREE.WebGLRenderer();
+    renderer.setSize( window.innerWidth window.innerHeight );
+    documentbody.appendChiled( renderer.domElement );
+    
+    window.addEventlistener('resize',function(){
+    renderer.setSize(window.inneridth,window.innerHeight);
+    camer.aspect = window.inneridth/window.innerHeight;
+    camera.updatePojectionMatrix();
+    },false);
+    
+    var geometry = new THREE.BoxGeometry(1,1,1);
+    var material= new THREE.MeshBasicMaterial({color: 0xccffcc});
+    ar mesh =new THREE.Mesh( geometry, material );
+    scene.ad( mesh );
+    
+    camera.ad( mesh );
+    
+    camera.positon.z = 5;
+    
+    var clock = new THREE.Clock();
+    var render =function () [
+    requestAnimationFrae( render );
+    
+    var delta_time = clock.getDelta(9;
+    mesh.rotation.x += 0.1 * delta_time;
+    mesh.rotation.y += 0.3 * delta_time;
+    
+    renderer.render(scee, camera);
+    };
+    render();
+    </script>
+    </body>
+    </html>
