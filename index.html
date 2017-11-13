@@ -25,6 +25,11 @@
     camera.updatePojectionMatrix();
     }, false );
     
+    var light = new THREE.DirectionaLight(0xccccc);
+    light.position.set(0,10030);
+    scene.add(light);
+    scen.add(new THREE.AmbientLight(0x66666)):
+    
     var geometry = new THREE.BoxGeometry( 1, 1, 1 );
     var material = new THREE.MeshBasicMaterial({color: 0xccffcc});
     var mesh = new THREE.Mesh( geometry, material );
